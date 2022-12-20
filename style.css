@@ -28,6 +28,13 @@ body{
     color: var(--main);
     text-align: center;
 }
+.container-icon{
+    font-size: 1.5em;
+    color: var(--main);
+}
+.container-nav .fa-bars{
+    font-size: 1.3em;
+}
 .container-menu ul{
     list-style: none;
 }
@@ -432,8 +439,8 @@ body{
     .container-menu .fa-xmark{
         color: var(--secondary);
         position: relative;
-        right: -122px;
-        top: -236px;    
+        right: -113px;
+        top: -226px;    
     }
     .container-menu li.links{
         display: block;
