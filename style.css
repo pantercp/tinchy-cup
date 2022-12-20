@@ -48,16 +48,10 @@ body{
 }
 .hero-intro{
     color: var(--primary);
-    margin-top: 150px;
+    margin-top: 80px;
+    font-size: 1em;
+    text-align: center;
     align-self: flex-start;
-}
-.hero-card{
-    background-color: var(--primary);
-    border: 1px solid var(--secondary);
-    border-bottom: 3px solid var(--secondary);
-    color: var(--main);
-    border-radius: 20px;
-    padding: 20px;
 }
 
 /* -----------Competition-------------- */
@@ -93,11 +87,18 @@ body{
     font-size: 0.9em;
 }
 /* -------------Season------------- */
+.title{
+    color: var(--primary);
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 20px;
+}
 .season-wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 .season-stats{
     margin: 10px;
@@ -142,9 +143,6 @@ body{
     margin-bottom: 10px;
 }
 
-
-
-
 /* --------------Months Winner------------- */
 .winner{
     text-align: center;
@@ -157,6 +155,7 @@ body{
     background-color: var(--main);
     color: var(--primary);
     padding-bottom: 40px;
+    margin: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -353,4 +352,17 @@ body{
     background-color: var(--main);
 }
 
+/* ------------Device Responsiveness------------- */
+@media only screen and (max-width: 1200px){
+    .hero-intro{
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .hero-intro{
+        font-size: 0.8em;
+        margin-top: 140px;
+    }
+}
 
