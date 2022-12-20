@@ -14,6 +14,9 @@ body{
 /* ---------Navigation Bar---------- */
 .container-nav{
     display: flex;
+    position: sticky;
+    font-weight: 700;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary);
@@ -229,6 +232,7 @@ body{
     border: 1px solid var(--secondary);
     border-bottom: 3px solid var(--secondary);
     max-height: 400px;
+    min-width: auto;
 }
 .month-team{
     display: flex;
@@ -365,7 +369,23 @@ body{
     max-width: 900px;
 }
 /* ------------Footer 2nd row------------- */
+
 .container-footer-2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--primary);
+    justify-content: space-around;
+}
+.foot-col-1 p{
+    max-width: 200px;
+    margin: 10px;
+}
+.foot-col-3 i{
+    font-size: 1em;
+    margin: 5px;
+}
+.footer-2-mid-col{
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
@@ -373,7 +393,7 @@ body{
     text-align: center;
     padding: 20px;
 }
-.container-footer-2 h4{
+.footer-2-mid-col h4{
     font-size: 0.9em;
     font-weight: 700;
     margin-bottom: 10px;
@@ -381,7 +401,7 @@ body{
     padding-top: 10px;
     max-width: 400px;
 }
-.container-footer-2 img{
+.footer-2-mid-col img{
     width: 60px;
     height: 100%;
     padding: 10px;
@@ -410,22 +430,26 @@ body{
         display: block;
     }
     .container-menu .fa-xmark{
-        color: #09AAC3;
+        color: var(--secondary);
         position: relative;
-        right: -120px;
-        top: 8px;    }
-    .container-menu li{
+        right: -122px;
+        top: -236px;    
+    }
+    .container-menu li.links{
         display: block;
-        margin: 10px;
+        border-bottom: 1px solid var(--secondary);
+        border-left: 2px solid var(--secondary);
+        background-color: var(--main);
+        padding: 10px;
+    }
+    .container-menu li.last{
+        border-bottom: 2px solid var(--secondary);
     }
     .container-menu ul{
         position: fixed;
         right: -200px;
-        padding: 10px;
-        top: 60px;
-        background-color: var(--main);
-        border-left: 1px solid var(--primary);
-        border-bottom: 1px solid var(--primary);
+        padding-inline-start: 0;
+        top: 59px;
         z-index: 2;
         transition: right 0.5s;
     }
