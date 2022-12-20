@@ -16,14 +16,16 @@
             <span>Tinchy<br>Cup</span>
         </div>
         <div class="container-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
+            <ul id="sidemenu">
+                <li><a href="#" class="link">Home</a></li>
                 <li><a href="#">Competition</a></li>
                 <li><a href="#">Season</a></li>
                 <li><a href="#">Prizes</a></li>
                 <li><a href="#">Winners</a></li>
                 <li><a href="#">Entry</a></li>
+                <i class="fa-solid fa-xmark mob-icon" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars mob-icon" onclick="openmenu()"></i>
         </div>
     </div>
     <div class="container-hero">
@@ -230,6 +232,20 @@
         <h4>Website Created By:</h4>
         <img src="images/Transp.png" alt="">
     </div>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0"
+        }
+        function closemenu() {
+            sidemenu.style.right = "-240px"
+        }
+
+    </script>
+
 </body>
 
 </html>

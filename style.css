@@ -19,6 +19,7 @@ body{
     background-color: var(--primary);
     border-bottom: 2px solid var(--secondary);
     padding: 10px;
+    z-index: 3;
 }
 .container-logo{
     color: var(--main);
@@ -148,8 +149,10 @@ body{
 /* --------------Months Winner------------- */
 .winner{
     text-align: center;
+    text-decoration: underline;
     margin: 0;
     padding: 20px;
+    font-size: 2em;
     background-color: var(--main);
     color: var(--primary);
 }
@@ -178,7 +181,7 @@ body{
     margin: 10px;
 }
 .manager-card .fa-solid{
-    font-size: 5em;
+    font-size: 4em;
     margin: 10px;
 }
 .manager-card h2{
@@ -387,6 +390,10 @@ body{
 }
 
 /* ------------Device Responsiveness------------- */
+.container-menu .mob-icon {
+    display: none;
+}
+
 @media only screen and (max-width: 1200px){
     .hero-intro{
         margin-top: 100px;
@@ -397,6 +404,40 @@ body{
     .hero-intro{
         font-size: 0.8em;
         margin-top: 140px;
+    }
+/* -----------Mobile Sidemenu---------- */
+    .container-menu .fa-solid{
+        display: block;
+    }
+    .container-menu .fa-xmark{
+        color: #09AAC3;
+        position: relative;
+        right: -120px;
+        top: 8px;    }
+    .container-menu li{
+        display: block;
+        margin: 10px;
+    }
+    .container-menu ul{
+        position: fixed;
+        right: -200px;
+        padding: 10px;
+        top: 60px;
+        background-color: var(--main);
+        border-left: 1px solid var(--primary);
+        border-bottom: 1px solid var(--primary);
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .container-menu a{
+        color: var(--primary);
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .winner{
+        font-size: 1.7em;
     }
 }
 
