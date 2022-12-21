@@ -14,6 +14,7 @@ body{
 /* ---------Navigation Bar---------- */
 .container-nav{
     display: flex;
+    height: 73px;
     position: sticky;
     font-weight: 700;
     top: 0;
