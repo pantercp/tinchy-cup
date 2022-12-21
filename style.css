@@ -353,7 +353,7 @@ body{
     margin: 10px;
 }
 .foot-logo h2{
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .foot-logo i{
     font-size: 2em;
@@ -388,9 +388,8 @@ body{
     max-width: 200px;
     margin: 10px;
 }
-.foot-col-3 i{
-    font-size: 1em;
-    margin: 5px;
+.container-footer-2 i{
+    font-size: 2em;
 }
 .footer-2-mid-col{
     background-color: var(--primary);
@@ -400,13 +399,13 @@ body{
     text-align: center;
     padding: 20px;
 }
-.footer-2-mid-col h4{
+.title-h4{
     font-size: 0.9em;
     font-weight: 700;
-    margin-bottom: 10px;
-    border-top: 3px solid var(--secondary);
+    text-align: center;
+    background-color: var(--primary);
+    text-decoration: underline;
     padding-top: 10px;
-    max-width: 400px;
 }
 .footer-2-mid-col img{
     width: 60px;
