@@ -32,20 +32,81 @@ body{
     font-size: 1.5em;
     color: var(--main);
 }
-.container-nav .fa-bars{
-    font-size: 1.3em;
-}
-.container-menu ul{
+
+/* -----------burger--------- */
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 40px;
+    height: 4px;
+    background: var(--main);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: var(--main);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-13px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(13px);
+  }
+  /*-----------Animation------------*/
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  /* ----------DropDown Menu---------- */
+  .menu-btn ul{
+    display: none;
+    position: absolute;
+    width: 140px;
+    background-color: var(--main);
+    padding-inline-start: 0px;
     list-style: none;
-}
-.container-menu li{
-    display: inline-block;
-}
-.container-menu a{
+    top: 60px;
+    right: -150px;
+    transition: right 0.5s;
+    border: 2px solid var(--secondary);
+  }
+  .menu-btn li{
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--secondary);
+  }
+  .menu-btn a{
     text-decoration: none;
-    margin: 10px;
-    color: var(--main);
-}
+    color: var(--primary);
+  }
+  .menu-btn.open ul{
+    right: -10px;
+    display: block;
+  }
+
 /* -------------Hero Section-------------- */
 .container-hero{
     display: flex;
@@ -444,7 +505,7 @@ body{
         margin-top: 140px;
     }
 /* -----------Mobile Sidemenu---------- */
-    .container-menu .fa-solid{
+    /* .container-menu .fa-solid{
         display: block;
     }
     .container-menu .fa-xmark{
@@ -473,7 +534,7 @@ body{
     }
     .container-menu a{
         color: var(--primary);
-    }
+    } */
 
 }
 
