@@ -125,7 +125,7 @@ body{
     background-image: url(images/thomas-serer-r-xKieMqL34-unsplash\ \(1\).jpg);
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 90vh;
     position: relative;
 }
 .hero-intro{
@@ -144,7 +144,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    text-align: center;
+    text-align: justify;
 }
 .container-competition h2{
     margin-bottom: 10px;
@@ -228,18 +228,54 @@ body{
     font-size: 4.5em;
     margin-bottom: 10px;
 }
-/* -------------Banner------------- */
-.container-banner{
+/* -------------Join Banner------------- */
+.container-join{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     max-width: 100vw;
     padding: 10px;
 }
-.container-banner img{
+.container-join img{
     max-height: 250px;
     max-width: 100%;
     border-radius: 10px;
+}
+.next-season{
+    color: var(--primary);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.next-season h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+.next-season ul{
+    margin: 15px 0px;
+}
+.next-season li{
+    font-size: 1.2em;
+    margin: 10px;
+}
+.next-season button{
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: var(--main);
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    transition: 0.3s;
+}
+.next-season button:hover{
+    background-color: var(--primary);
+    color: var(--main);
+    transform: translateY(-5px);
+    font-size: 0.9em;
 }
 
 /* --------------Months Winner------------- */
@@ -285,6 +321,10 @@ body{
     margin-bottom: 10px;
     text-align: center;
 }
+.manager-card .summary{
+    font-weight: bold;
+    font-style: italic;
+}
 .manager-card button{
     border-radius: 10px;
     padding: 8px;
@@ -315,7 +355,8 @@ body{
 }
 .manager-card p{
     max-width: 500px;
-    margin: 10px;
+    margin: 20px 10px;
+    text-align: justify;
 }
 .manager-card td.first{
     width: 200px;
@@ -329,6 +370,7 @@ body{
 .month-team{
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
     max-width: 100vw;
     align-items: center;
 }
@@ -338,13 +380,13 @@ body{
     text-align: center;
     max-width: 400px;
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: 1.15em;
     font-style: italic;
 }
 .month-team .source{
     font-size: 1em;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     font-weight: 500;
     border-top: 1px solid var(--primary);
 }
