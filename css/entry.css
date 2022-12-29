@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main);
+}
+:root {
+    --primary: #09AAC3;
+    --secondary: #2ecfe7;
+    --main: #0C1414;
+  }
+
+/* ---------Navigation Bar---------- */
+.container-nav{
+    display: flex;
+    height: 73px;
+    position: sticky;
+    font-weight: 700;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    border-bottom: 2px solid var(--secondary);
+    padding: 10px;
+    z-index: 3;
+}
+.container-logo{
+    color: var(--main);
+    text-align: center;
+    font-size: 1.3em;
+}
+.container-icon{
+    font-size: 2em;
+    color: var(--main);
+}
+
+/* -----------burger--------- */
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 40px;
+    height: 4px;
+    background: var(--main);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: var(--main);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-13px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(13px);
+  }
+  /*-----------Animation------------*/
+  .menu-btn.open{
+    overflow: visible;
+  }
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  /* ----------DropDown Menu---------- */
+  .menu-btn ul{
+    overflow: hidden;
+    position: absolute;
+    width: 140px;
+    height: 0px;
+    padding-inline-start: 0px;
+    list-style: none;
+    top: 56px;
+    right: -10px;
+    transition: all 0.5s;
+    border: none;
+  }
+  .menu-btn li{
+    transition: all 0.5s;
+    padding: 0px 20px;
+    position: absolute;
+  }
+  .menu-btn a{
+    transition: all 0.5s;
+  }
+  .menu-btn .last{
+    border-bottom: 0;
+  }
+  .menu-btn a{
+    text-decoration: none;
+    color: var(--primary);
+  }
+  .menu-btn.open ul{
+    right: -10px;
+    height: auto;
+    border: 2px solid var(--secondary);
+    background-color: var(--main);
+  }
+  .menu-btn.open li{
+    padding: 10px 20px;
+    position: relative;
+    border-bottom: 1px solid var(--secondary);
+  }
+  .menu-btn.open .last{
+    border-bottom: 0;
+  }
+
+
+
+  .fill{
+    height: 150vh;
+  }
+
+
+  
+/* -------------Footer------------ */
+.container-footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 30px;
+    justify-content: space-around;
+    background-color: var(--primary);
+}
+.foot-pages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.foot-logo{
+    text-align: center;
+    margin: 10px;
+}
+.foot-logo h2{
+    margin-top: 10px;
+}
+.foot-logo i{
+    font-size: 2em;
+}
+.foot-title{
+    text-align: center;
+}
+.foot-about{
+    margin: 10px;
+}
+.container-footer ul{
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+.container-footer a{
+    text-decoration: none;
+}
+.container-footer p{
+    max-width: 900px;
+}
+/* ------------Footer 2nd row------------- */
+
+.container-footer-2{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background-color: var(--primary);
+    justify-content: space-around;
+}
+.container-footer-2 h3{
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.foot-col-1 p{
+    max-width: 200px;
+    margin: 10px;
+}
+.container-footer-2 i{
+    font-size: 2em;
+    background: -webkit-linear-gradient(#00058b, #8300c5);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-2-mid-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.footer-2-mid-col .contain-logo{
+    width: 80px;
+    height: 80px;
+    padding: 13px 10px 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--main);
+}
+.footer-2-mid-col img{
+    width: 100%;
+}
