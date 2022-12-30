@@ -132,7 +132,7 @@ body{
 /* -------------Hero Section-------------- */
 .container-hero{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-around;
     background-image: url(images/thomas-serer-r-xKieMqL34-unsplash\ \(1\).jpg);
     background-size: cover;
@@ -145,7 +145,7 @@ body{
     margin-top: 135px;
     font-size: 1em;
     text-align: center;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }
 
 /* -----------Competition-------------- */
@@ -494,15 +494,19 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
-    padding-top: 30px;
+    padding-top: 20px;
     justify-content: space-around;
+    align-items: center;
     background-color: var(--primary);
 }
 .foot-pages{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    padding: 10px;
+}
+.foot-pages h3{
+    align-self: flex-start;
 }
 .foot-logo{
     text-align: center;
@@ -512,7 +516,7 @@ body{
     margin-top: 10px;
 }
 .foot-logo i{
-    font-size: 2em;
+    font-size: 3em;
 }
 .foot-title{
     text-align: center;
@@ -527,6 +531,8 @@ body{
 }
 .container-footer a{
     text-decoration: none;
+    font-size: 0.8em;
+    color: #1301aa;
 }
 .container-footer p{
     max-width: 900px;
@@ -537,20 +543,24 @@ body{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    align-items: center;
+    /* align-items: center; */
     background-color: var(--primary);
     justify-content: space-around;
 }
 .container-footer-2 h3{
-    margin-bottom: 10px;
-    text-decoration: underline;
+    /* margin-bottom: 10px; */
+    /* text-decoration: underline; */
+    text-align: start;
 }
-.foot-col-1 p{
+.footer-col-1 p{
     max-width: 200px;
-    margin: 10px;
+    /* margin: 10px; */
+    font-size: 0.8em;
+    text-align: justify;
 }
 .container-footer-2 i{
-    font-size: 2em;
+    font-size: 1.2em;
+    margin: 2px;
     background: -webkit-linear-gradient(#00058b, #8300c5);
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -573,6 +583,11 @@ body{
 }
 .footer-2-mid-col img{
     width: 100%;
+}
+.social-wrap{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
 }
 
 /* ------------Device Responsiveness------------- */
