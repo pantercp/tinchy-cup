@@ -7,6 +7,9 @@
 body {
     background-color: var(--main);
 }
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
 
 :root {
     --primary: #09AAC3;
@@ -152,7 +155,7 @@ body {
 
 /* -------------hero------------- */
 .hero {
-    height: 60vh;
+    height: 50vh;
     background-image: url(../images/ball.jpg);
     background-size: cover;
     background-position: center;
@@ -246,10 +249,12 @@ h2{
 }
 .entry-form h3{
     color: var(--primary);
-    margin: 10px;
+    font-size: 1.8em;
+    margin: 15px;
 }
-.form input {
-    margin: 0 10px 10px 10px;
+.form input{
+    margin: 0px 10px 10px 10px;
+    width: 300px;
     border: none;
     color: var(--secondary);
     border-radius: 5px;
@@ -273,17 +278,18 @@ h2{
 /* --------------Help-FAQs------------ */
 .help-container{
     display: flex;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
 }
 .faq-bar{
     color: var(--primary);
-    width: 700px;
+    width: 80%;
     position: relative;
     background-color: #0c1f1f;
 }
 .help-container h5{
-    font-size: 1.1em;
+    font-size: 0.9em;
     padding: 5px 10px;
 }
 .faq-drop::before,
@@ -294,7 +300,7 @@ h2{
     height: 2px;
     background: var(--secondary);
     border-radius: 5px;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .faq-drop::before {
     right: 5px;
@@ -408,5 +414,13 @@ h2{
     }
     .detail-card span{
         font-size: 0.8em;
+    }
+    .hero{
+        height: 20vh;
+    }
+}
+@media only screen and (max-width: 350px){
+    .form input {
+        width: auto;
     }
 }

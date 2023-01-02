@@ -6,6 +6,9 @@
 body{
     background-color: var(--main);
 }
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
 :root {
     --primary: #09AAC3;
     --secondary: #2ecfe7;
