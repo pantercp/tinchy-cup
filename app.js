@@ -9,3 +9,15 @@ menuBtn.addEventListener('click', () => {
     menuOpen = false;
   }
 });
+
+const faqBtn = document.querySelector('.faq-bar');
+let faqOpen = false;
+faqBtn.addEventListener('click', () => {
+  if(!faqOpen) {
+    faqBtn.classList.add('open');
+    faqOpen = true;
+  } else {
+    faqBtn.classList.remove('open');
+    faqOpen = false;
+  }
+});
