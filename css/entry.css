@@ -7,7 +7,7 @@
 body {
     background-color: var(--main);
 }
-a, a:visited, a:hover, a:active {
+a, a:visited, a:hover, a:active{
     color: inherit;
   }
 
@@ -259,7 +259,7 @@ h2{
     color: var(--secondary);
     border-radius: 5px;
     padding: 10px;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     background-color: var(--main);
 }
 .form input:active {
@@ -276,61 +276,107 @@ h2{
 
 
 /* --------------Help-FAQs------------ */
-.help-container{
+
+
+.container-faq{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
-.faq-bar{
-    color: var(--primary);
-    width: 80%;
+
+.accordion-item{
+    background-color: var(--main);
+    border-radius: .4rem;
+    border: 2px solid var(--secondary);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.accordion{
+    max-width: 550px;
+}
+.accordion-item a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+.accordion-link{
     position: relative;
-    background-color: #0c1f1f;
+    font-size: 1rem;
+    color: var(--primary);
+    text-decoration: none;
+    background-color: var(--main);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
-.help-container h5{
-    font-size: 0.9em;
-    padding: 5px 10px;
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--main);
+    transition: max-height 650ms;
 }
-.faq-drop::before,
-.faq-drop::after {
+
+.answer::before{
     content: '';
     position: absolute;
-    width: 20px;
-    height: 2px;
-    background: var(--secondary);
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
+    width: 3px;
+    height: 90%;
+    background-color: var(--secondary);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
-.faq-drop::before {
-    right: 5px;
-    top: 15px;
+.answer p{
+    color: var(--secondary);
+    text-align: justify;
+    font-size: 0.9rem;
+    padding: 2rem;
 }
 
-.faq-drop::after {
-    right: 5px;
-    top: 15px;
-    transform: rotate(90deg);
+.accordion-item:target .answer{
+    max-height: 20rem;
 }
-.help-container p{
-    font-size: 0.8em;
-    font-size: 0.8em;
-    padding: 5px 10px;
-    background-color: #112e2e;
+.accordion-item:target .accordion-link .ion-md-add{
     display: none;
-    background-color: #112e2e;
 }
-/*-----------Animation------------*/
-
-.faq-bar.open .faq-drop::before {
-    transform: rotate(180deg);
-}
-.faq-bar.open .faq-drop::after {
-    transform: rotate(0deg);
-}
-.faq-bar.open p{
+.accordion-item:target .accordion-link .ion-md-remove{
     display: block;
 }
+
+/* -----------Icon----------- */
+
+.drop-icon::before,
+.drop-icon::after
+{
+    content: '';
+    width: 15px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transition: all 0.5s;
+}
+.drop-icon::after{
+    transform: rotate(90deg);
+}
+
+.accordion-item:target .drop-icon::before{
+    transform: rotate(180deg);
+}
+.accordion-item:target .drop-icon::after{
+    transform: rotate(0deg);
+}
+
+
 
 
 /* -------------Footer------------ */
@@ -417,6 +463,9 @@ h2{
     }
     .hero{
         height: 20vh;
+    }
+    .entry-form{
+        width: 80vw;
     }
 }
 @media only screen and (max-width: 350px){
