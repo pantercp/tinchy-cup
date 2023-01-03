@@ -446,19 +446,24 @@ a, a:visited, a:hover, a:active {
     margin: 20px 0px 10px;
 }
 .container-stats i{
-    font-size: 2.3em;
+    font-size: 2.5em;
     padding-bottom: 10px;
 }
 .container-stats .wrapper{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
-    margin-bottom: 5px;
     justify-content: space-around;
+    align-items: center;
 }
 .wrapper-container{
     margin: 10px;
     width: 70px;
+}
+.wrapper-container h4{
+    margin: 0px 0px 10px 0px;
+}
+.wrapper-container h5{
+    font-size: 1em;
 }
 .container-stats button{
     border-radius: 10px;

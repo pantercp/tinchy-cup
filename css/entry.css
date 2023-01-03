@@ -266,7 +266,7 @@ h2 {
 .entry-form h3 {
     color: var(--primary);
     font-size: 1.8em;
-    margin: 15px;
+    margin: 15px 0px;
     text-align: center;
 }
 
@@ -316,6 +316,9 @@ h2 {
     border-radius: .4rem;
     border: 2px solid var(--main);
 }
+.accordion span{
+    margin-right: 20px;
+}
 
 .panel {
     padding: 0 18px;
@@ -327,6 +330,9 @@ h2 {
     max-width: 550px;
     text-align: justify;
 }
+.active .panel{
+    padding: 10px 18px;
+}
 
 .accordion::before,
 .accordion::after {
@@ -334,7 +340,7 @@ h2 {
     position: absolute;
     width: 15px;
     height: 3px;
-    right: 15px;
+    right: 10px;
     top: 50%;
     border-radius: 5px;
     background-color: var(--main);
@@ -354,104 +360,6 @@ h2 {
     transform: rotate(0deg);
 }
 
-
-/* --------------Help-FAQs------------ */
-
-/* .faq{
-    font-size: 1.8em;
-}
-.container-faq{
-    width: 100%;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.accordion-item{
-    background-color: var(--main);
-    border-radius: .4rem;
-    border: 2px solid var(--secondary);
-    margin-bottom: 1rem;
-    padding: 10px;
-}
-.accordion{
-    max-width: 550px;
-}
-.accordion-item a{
-    color: var(--secondary);
-    text-decoration: none;
-}
-.accordion-link{
-    position: relative;
-    font-size: 1rem;
-    color: var(--primary);
-    text-decoration: none;
-    background-color: var(--main);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.answer{
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-    background-color: var(--main);
-    transition: max-height 650ms;
-}
-
-.answer::before{
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: 90%;
-    background-color: var(--secondary);
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-.answer p{
-    color: var(--secondary);
-    text-align: justify;
-    font-size: 0.9rem;
-    padding: 2rem;
-}
-
-.accordion-item:target .answer{
-    max-height: 20rem;
-} */
-
-
-/* -----------Icon----------- */
-
-/* .drop-icon::before,
-.drop-icon::after
-{
-    content: '';
-    width: 15px;
-    height: 2px;
-    border-radius: 5px;
-    background-color: var(--secondary);
-    position: absolute;
-    top: 50%;
-    right: 3px;
-    transition: all 0.5s;
-}
-.drop-icon::after{
-    transform: rotate(90deg);
-}
-
-.accordion-item:target .drop-icon::before{
-    transform: rotate(180deg);
-}
-.accordion-item:target .drop-icon::after{
-    transform: rotate(0deg);
-} */
 
 
 
