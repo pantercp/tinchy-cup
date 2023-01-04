@@ -428,13 +428,14 @@ img.rules{
     text-align: justify;
 }
 
-.container-footer i {
+.container-footer i{
     font-size: 1.4em;
     margin: 10px;
-    background: -webkit-linear-gradient(#00058b, #8300c5);
+    color: #1301aa;
+    /* background: -webkit-linear-gradient(#00058b, #8300c5);
     background-clip: content-box;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 }
 
 .contain-links {
@@ -457,6 +458,16 @@ img.rules{
 
 .footer-about {
     padding: 10px;
+    position: relative;
+}
+.footer-about::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    top: 12px;
+    left: -2px;
+    background: var(--secondary);
 }
 
 .contain-cjpixel {
@@ -464,7 +475,9 @@ img.rules{
     justify-content: space-around;
     align-items: center;
 }
-
+.cjpixel-content a{
+    font-size: 1em;
+}
 
 /* ------------Device Responsiveness------------- */
 
