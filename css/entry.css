@@ -218,6 +218,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin: 20px 0px;
 }
 
@@ -255,19 +256,29 @@ h2 {
 /* ------------Entry Form------------ */
 .entry-form {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .entry-form h3 {
     color: var(--primary);
     font-size: 1.8em;
-    margin: 15px 0px;
+    margin: 10px 0px 0px 0px;
     text-align: center;
+}
+.entry-form p{
+    color: var(--primary);
+    max-width: 300px;
+    text-align: justify;
+    margin: 15px;
 }
 
 .form input {
@@ -291,6 +302,33 @@ h2 {
     color: var(--main);
     border: none;
     padding: 5px 10px;
+}
+
+/* -------------Rules----------- */
+.container-rules{
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rules-guide{
+    max-width: 550px;
+    padding: 20px;
+}
+img.rules{
+    max-width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.rules-guide ol{
+    padding: 0px 0px 0px 15px;
+}
+.rules-guide li{
+    padding: 5px;
+    border: 1px solid var(--primary);
+}
+.rules-guide li::marker{
+    background-color: #fff;
 }
 
 /* -----------Accordion---------- */
@@ -361,36 +399,12 @@ h2 {
     transform: rotate(0deg);
 }
 
-/* -------------Rules----------- */
-.container-rules{
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
-}
-.rules-guide{
-    max-width: 550px;
-    padding: 20px;
-}
-img.rules{
-    max-width: 100%;
-    border-radius: 10px;
-}
-.rules-guide ol{
-    padding: 0px 0px 0px 15px;
-}
-.rules-guide li{
-    padding: 5px;
-    border: 1px solid var(--primary);
-}
-.rules-guide li::marker{
-    background-color: #fff;
-}
 
 /* -------------Footer------------ */
 .container-footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 20px;
     justify-content: space-around;
     align-items: flex-start;
