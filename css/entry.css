@@ -287,7 +287,7 @@ h2 {
 
 .form button {
     border-radius: 10px;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: var(--main);
     border: none;
     padding: 5px 10px;
@@ -299,9 +299,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0px;
 }
 .accordion {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     position: relative;
     color: var(--main);
     cursor: pointer;
@@ -325,7 +326,7 @@ h2 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    color: var(--secondary);
+    color: var(--primary);
     width: 80vw;
     max-width: 550px;
     text-align: justify;
@@ -360,9 +361,30 @@ h2 {
     transform: rotate(0deg);
 }
 
-
-
-
+/* -------------Rules----------- */
+.container-rules{
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+}
+.rules-guide{
+    max-width: 550px;
+    padding: 20px;
+}
+img.rules{
+    max-width: 100%;
+    border-radius: 10px;
+}
+.rules-guide ol{
+    padding: 0px 0px 0px 15px;
+}
+.rules-guide li{
+    padding: 5px;
+    border: 1px solid var(--primary);
+}
+.rules-guide li::marker{
+    background-color: #fff;
+}
 
 /* -------------Footer------------ */
 .container-footer {
