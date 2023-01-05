@@ -96,15 +96,16 @@
         <div class="entry-form" id="entry">
             <h3>Join The Waiting List!</h3>
             <p>Fill out the form below for free to guarantee yourself a spot in the competition next season</p>
-            <div class="form">
-                <label for="fullname"></label>
-                <input type="text" name="fullname" placeholder="Full name">
-                <label for="email"></label>
-                <input type="email" placeholder="Email Address" name="email">
-                <label for="phone"></label>
-                <input type="number" placeholder="Phone Number" name="phone">
-                <button type="button">Send</button>
-            </div>
+            <form name="submit-to-google-sheet">
+                <label for="Fullname"></label>
+                <input type="text" name="Fullname" placeholder="Full name">
+                <label for="Email"></label>
+                <input type="email" placeholder="Email Address" name="Email">
+                <label for="Phone"></label>
+                <input type="number" placeholder="Phone Number" name="Phone">
+                <button type="submit">Send</button>
+            </form>
+            <span id="msg"></span>
         </div>
     </div>
     <div class="container-rules" id="rules">
@@ -135,64 +136,64 @@
         <button class="accordion"><span>When do I have to pay for the entry?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>The entry fee is to be paid before the FPL season commences (confirmed by Fantasy Premier League)
-                during the run up to the season. Payment details will also be confirmed within 1-2 months of the
-                first kick-off of the season.
-            </p>
+                <p>The entry fee is to be paid before the FPL season commences (confirmed by Fantasy Premier League)
+                    during the run up to the season. Payment details will also be confirmed within 1-2 months of the
+                    first kick-off of the season.
+                </p>
             </div>
         </div>
         <button class="accordion"><span>What are the entry requirements?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>As the competition is handled through WhatsApp and this website, it is strongly
-                required to have WhatsApp to participate in the competition. Aside from that, having a valid FPL
-                team and paying the entry fee are the only requirements.
-            </p>
+                <p>As the competition is handled through WhatsApp and this website, it is strongly
+                    required to have WhatsApp to participate in the competition. Aside from that, having a valid FPL
+                    team and paying the entry fee are the only requirements.
+                </p>
             </div>
         </div>
         <button class="accordion"><span>When are the cash prizes paid out?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>Any cash prizes will be paid within 2 weeks of being a confirmed winner for that cash prize.</p>
+                <p>Any cash prizes will be paid within 2 weeks of being a confirmed winner for that cash prize.</p>
             </div>
         </div>
         <button class="accordion"><span>How do I create an FPL team?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>For all Fantasy Premier League information and help please follow this <a
-                    href="https://fantasy.premierleague.com/help">link</a></p>
-                    </div>
+                <p>For all Fantasy Premier League information and help please follow this <a
+                        href="https://fantasy.premierleague.com/help">link</a></p>
+            </div>
         </div>
         <button class="accordion"><span>How are the cash prizes decided?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>All competitors get to vote between Gameweek 1 and 2 of the season on how the cash prizes should
-                be divided.
-            </p>
+                <p>All competitors get to vote between Gameweek 1 and 2 of the season on how the cash prizes should
+                    be divided.
+                </p>
             </div>
         </div>
         <button class="accordion"><span>Why are there so many cash prizes?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>With the aim of being a fun competition for everyone, prizes are divided as much as appropriate
-                so that we have a healthy collection of winners from every season.
-            </p>
+                <p>With the aim of being a fun competition for everyone, prizes are divided as much as appropriate
+                    so that we have a healthy collection of winners from every season.
+                </p>
             </div>
         </div>
         <button class="accordion"><span>When will the season 22/23 officially be open?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>The FPL website is usually active for the new season between 3-6 weeks before the first kick-off
-                of the season.
-            </p>
+                <p>The FPL website is usually active for the new season between 3-6 weeks before the first kick-off
+                    of the season.
+                </p>
             </div>
         </div>
         <button class="accordion"><span>What is the cup prize?</span></button>
         <div class="panel">
             <div class="answer">
-            <p>The Fantasy Premier League season usually has a knock-out tournament for each season. The Cup
-                commences towards the end of the season and is competed amongst the members of the league.
-            </p>
+                <p>The Fantasy Premier League season usually has a knock-out tournament for each season. The Cup
+                    commences towards the end of the season and is competed amongst the members of the league.
+                </p>
             </div>
         </div>
     </div>
@@ -245,7 +246,24 @@
 
         <script src="../app.js"></script>
 
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyGAsOwaX6WZ3oSRBSCZbQD_WJtp2SUp2lkxXMc6lY_vLcl4xczErf4aRZcPbzfUvJusA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
 
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Joined waiting list successfully"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        },5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
 </body>
 
 </html>
