@@ -33,6 +33,9 @@ a, a:visited, a:hover, a:active {
     text-align: center;
     font-size: 1.3em;
 }
+.container-logo a{
+    text-decoration: none;
+}
 .container-icon{
     font-size: 2em;
     color: var(--main);
@@ -581,7 +584,6 @@ a, a:visited, a:hover, a:active {
 .cjpixel-content a{
     font-size: 1em;
 }
-
 
 
 /* ------------Device Responsiveness------------- */
