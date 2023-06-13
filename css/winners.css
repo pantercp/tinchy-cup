@@ -178,11 +178,97 @@ a:active {
     width: 300px;
 
 }
-h1.intro{
-    text-align: center;
-    color: var(--primary);
-    margin: 1rem;
+
+/* -----Hero-Left----- */
+
+.hero-left{
+    max-width: 800px;
 }
+
+.hero-left .summary-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left .summary{
+    padding: 1rem 2rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: var(--secondary);
+    border: 1px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    color: var(--main);
+    border-radius: 0.5rem;
+}
+
+.hero-left i{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-left .summary h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.winners-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-left span.position{
+    font-size: 2rem;
+    background-color: var(--secondary);
+    color: var(--main);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: block;
+}
+
+
+.hero-left span.prize{
+    font-size: 1.2rem;
+    border: 1px solid var(--secondary);
+    border-radius: 0.5rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: block;
+}
+
+.league-wrapper{
+    
+}
+
+.league-wrapper .winners-league{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+
+/* -----Table------ */
+
+.hero-section{
+    color: var(--secondary);
+}
+
+.hero-right{
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.hero-right h3{
+    text-align: center;
+    margin-block: 1rem;
+}
+
+.hero-section table{
+    color: var(--secondary);
+    width: 100%;
+}
+
 
 
 /* --------------Months Winner------------- */
