@@ -225,6 +225,11 @@ a:active {
     margin-bottom: 0.5rem;
 }
 
+.hero-left .summary span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .winners-wrapper {
     display: flex;
     justify-content: space-around;
@@ -239,6 +244,16 @@ a:active {
     padding: 0.5rem;
     margin: 0.5rem;
     display: block;
+}
+
+.hero-left span.first{
+    font-size: 2rem;
+}
+.hero-left span.second{
+    font-size: 1.4rem;
+}
+.hero-left span.third{
+    font-size: 1.3rem;
 }
 
 
@@ -341,6 +356,59 @@ a:active {
 
 .hero-section table td.third{
     text-align: end;
+}
+
+
+/* ---------Monthly Section------- */
+
+.month-wrapper{
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    color: var(--main);
+    max-width: 500px;
+    margin: 0.25rem auto;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.month-wrapper .toggle-container{
+    height: 1rem;
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.month-wrapper .toggle-btn{
+    position: relative;
+    width: 100%;
+}
+
+.month-wrapper .toggle-btn::before,
+.toggle-btn::after{
+    content: '';
+    position: absolute;
+    background: var(--main);
+    border-radius: 0.5rem;
+    width: 1rem;
+    height: 3px;
+    left: 0;
+    top: 0;
+}
+
+.month-wrapper .toggle-btn::after{
+    transform: rotate(90deg);
+}
+
+.month-wrapper .toggle-container.active .toggle-btn::before{
+    transform: rotate(180deg);
+}
+
+.month-wrapper .toggle-container.active .toggle-btn::after{
+    transform: rotate(-90deg);
 }
 
 

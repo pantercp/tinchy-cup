@@ -25,3 +25,10 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+const toggleTabs = document.querySelectorAll(".month-wrapper");
+
+for(let toggleTab of toggleTabs){
+  toggleTab.addEventListener('click', () => {
+    toggleTab.lastElementChild.classList.toggle("active");
+  })
+}
