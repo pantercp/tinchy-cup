@@ -365,6 +365,12 @@ a:active {
     margin: 2rem 0.5rem;
 }
 
+.month-section h2{
+    margin: 1rem;
+    text-align: center;
+    color: var(--secondary);
+}
+
 .month-wrapper{
     display: flex;
     font-size: 1.1rem;
