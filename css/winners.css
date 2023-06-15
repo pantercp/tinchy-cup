@@ -361,6 +361,13 @@ a:active {
 
 /* ---------Monthly Section------- */
 
+h1.header{
+    text-align: center;
+    color: var(--secondary);
+    font-size: 2rem;
+    margin: 2rem 1rem;
+}
+
 .month-section{
     margin: 2rem 0.5rem;
 }
@@ -459,7 +466,6 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
 }
 
 .container-award {
@@ -470,7 +476,7 @@ a:active {
 }
 
 .row-award {
-    margin: 10px 10px 0px;
+    margin: 10px 0;
 }
 
 .manager-card .manager-icons {
