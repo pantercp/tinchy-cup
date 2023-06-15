@@ -30,5 +30,6 @@ const toggleTabs = document.querySelectorAll(".month-wrapper");
 for(let toggleTab of toggleTabs){
   toggleTab.addEventListener('click', () => {
     toggleTab.lastElementChild.classList.toggle("active");
+    toggleTab.parentElement.lastElementChild.classList.toggle("open");
   })
 }
